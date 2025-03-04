@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Makes sure the padding does not affect the total width */
+        }
+        input[type="text"]:focus {
+            border-color: #0056b3;
+            outline: none;
+        }
+        dropdown {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="pName">Product Name</label>
+        <input type="text" id="pName" required>
+        
+        <label for="pGroup">Group</label>
+        <input type="text" id="pGroup" required>
+        
+        <label for="unit">Unit</label>
+        <select id="unit">
+            <option value="kg">Kilogram</option>
+            <option value="litre">Litre</option>
+            <option value="piece">Piece</option>
+        </select>
+        
+        <label for="salesRate">Sales Rate</label>
+        <input type="number" id="salesRate">
+        
+        <label for="purchaseRate">Purchase Rate</label>
+        <input type="number" id="purchaseRate">
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
