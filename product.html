@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items:flex-start;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>HR</th>
+                <th>GD</th>
+                <th>GSD</th>
+                <th>GSD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>Manager</td>
+                <td>HR Department</td>
+                <td>5 Years</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>Developer</td>
+                <td>IT Department</td>
+                <td>3 Years</td>
+            </tr>
+            <tr>
+                <td>Emily Johnson</td>
+                <td>Designer</td>
+                <td>Creative Team</td>
+                <td>4 Years</td>
+            </tr>
+            <tr>
+                <td>Michael Brown</td>
+                <td>Analyst</td>
+                <td>Finance</td>
+                <td>6 Years</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
