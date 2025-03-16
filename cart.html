@@ -3,27 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Card</title>
     <style>
-        body{
-            background-color: aqua;
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #f0f8ff; /* Light blue gradient-like background */
+            display: flex;
             justify-content: center;
             align-items: center;
-            display: flex;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif; /* Modern font */
         }
-        .container{
-            width: 300px;
-            padding: 20px; /* Adds some space inside */
-            text-align: center; /* Centers text inside */
-            background-color: red;
+
+        /* Container Styling */
+        .container {
+            width: 320px;
+            background: linear-gradient(145deg, #ff7f50, #ff6347); /* Gradient background */
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+        }
+
+        /* Content Styling */
+        .content {
+            padding: 24px;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        h4 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        /* Subtitle Styling */
+        h6 {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        /* Description Styling */
+        p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #ff6347;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Hover Effect */
+        .button:hover {
+            background-color: #ff6347;
+            color: #fff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
 <body>
     <div class="container">
-       <h4>Apple Macbook M4</h4>
-       <h6>Apple Products</h6>
-       <p>Apple have the best products in the world</p>
+        <div class="content">
+            <h4>Apple Macbook M4</h4>
+            <h6>Apple Products</h6>
+            <p>Apple has the best products in the world. Experience innovation and elegance with the latest Macbook M4.</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
     </div>
 </body>
 </html>
