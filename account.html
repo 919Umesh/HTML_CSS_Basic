@@ -21,17 +21,84 @@
             background: linear-gradient(145deg, #ff7f50, #ff6347);
             width: 320px;
             border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .account:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 12px 30px rgba(0, 0, 0, 0.15); 
+        }
+        .content{
+            display: inline-block;
+            padding: 20px;
+            text-align: center;
+            color: #f0f8ff;
+        }
+        h2{
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;   
+        }
+        label{
+            font-size: 1rem;
+            font-weight: 500;
+            display: block; 
+            margin-bottom: 5px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        input[type="text"],
+        input[type="password"]{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: white;
+            font-size: 1rem;
+            transition: backgroung-color 0.3s ease-in-out;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+            outline: none;
+        }
+          .button {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background-color: white;
+            color: #ff6347;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: #ff6347;
+            color: white;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
 <body>
     <div class="account">
-       <h2>Create Account</h2>
-       <label>Username</label>
-       <input type="text">
-       <br>
-       <label>Password</label>
-       <input type="password">
+      <div class="content">
+        <h2>Create Account</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" pattern="Enter your password">
+        <button class="button">Create Account</button>
+      </div>
     </div>
 </body>
 </html>
